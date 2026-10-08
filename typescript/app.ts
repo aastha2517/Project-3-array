@@ -97,14 +97,15 @@ let temp:number = 0;
 
 for(let i = 0 ; i < sort_Arr.length ; i++){
     for(let j = 0 ; j < sort_Arr.length - 1 ; j++){
-        if(sort_Arr[i] <= sort_Arr[j]){
-            temp = sort_Arr[i];
-            sort_Arr[i] = sort_Arr[j];
-            sort_Arr[j] = temp;
+        if(sort_Arr[i] <= sort_Arr[j]){ 
+            temp = sort_Arr[i]; 
+            sort_Arr[i] = sort_Arr[j]; 
+            sort_Arr[j] = temp; 
         }
 
     }
 }
+
 document.getElementById('ascending')!.innerHTML = `Array elements in Ascending Order : ${sort_Arr}`;
 
 for(let i = 0 ; i < sort_Arr.length ; i++){
@@ -127,6 +128,23 @@ document.getElementById('char-output')!.innerHTML = `Array elements which has a 
 
 // Question-9  write a JavaScript program to  to print expected output for following string.
 
+// x = "airplane";    output:- r
+
+let x:string = "airplane";
+document.getElementById('str1')!.innerHTML = `Input : ${x}`;
+document.getElementById('str1-output')!.innerHTML = `Output : ${x.charAt(2)}`;
+
+//y= "oxoxoxox";   output:- "oXoXoXoX"
+
+let y:string = "oxoxoxox";
+document.getElementById('str2')!.innerHTML = `Input : ${y}`;
+document.getElementById('str2-output')!.innerHTML = `Output : ${y.replaceAll('x','X')}`;
+
+//z = "A New Java Book"; output:-  "a new java book" , "A NEW JAVA BOOK"  
+
+let z:string = "A New Java Book";
+document.getElementById('str3')!.innerHTML = `input : ${z}`;
+document.getElementById('str3-output')!.innerHTML = `Output : ${z.toLowerCase()} , ${z.toUpperCase()}`;
 
 
 // Question-10  write a JavaScript program for array reverse.
@@ -154,10 +172,38 @@ if( found_Arr.includes(found_num) === true){
     document.getElementById('found-output')!.innerHTML = `${found_num} is Found in array`;
 }else{
     document.getElementById('found-output')!.innerHTML = `${found_num} is Not Found in array`;
-
+    
 }
 
+// Question-12 write a JavaScript program for print your name and write the no of total character.
+
+let name:string = "Aastha"; 
+
+document.getElementById('name')!.innerHTML = `Your Name is ${name}`;
+document.getElementById('character-output')!.innerHTML = `The name ${name} has a total of ${name.length} charaters`;
 
 
+// Question-13  write a JavaScript program given this output using replace concept.
 
+let replace_string:string = "I often take a walk with my dog in the evening. His dog follows him everywhere. I don't feed my dog in the morning";
+
+document.getElementById('normal-string')!.innerHTML = "Input : I often take a walk with my dog in the evening. His dog follows him everywhere. I don't feed my dog in the morning";
+
+document.getElementById('replace-string')!.innerHTML = `Output : ${replace_string.replaceAll('dog', 'cat')}`;
+
+// Question-14  write a JavaScript program convert string to array.
+
+
+let normal_string_2:string = "Hire the top 1% freelance developers";
+
+document.getElementById('normal-string-2')!.innerHTML = `Input : ${normal_string_2}`;
+document.getElementById('array-string-output')!.innerHTML = `Output : ${normal_string_2.split(' ')}`;
+
+
+// Question-15  write a JavaScript program convert for array to string.
+
+let array_string_input:string[] =  ['5', '32', 'Daniel'];
+
+document.getElementById('array-string-input')!.innerHTML = `Input : [${array_string_input}]`;
+document.getElementById('string-output')!.innerHTML = `Output : ${array_string_input.join(',')}`;
 
